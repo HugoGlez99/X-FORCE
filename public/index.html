@@ -23,7 +23,6 @@
       <h1>Chat</h1>
     </header>
     <figure><img id=avatar src="" alt=Avatar></figure>
-    
     <p><b><output id=email></output></b><br><output id=nombre></output></p>
     <form action="javascript:agrega();">
       <input id="texto" type="text" required placeholder="Mensaje">
@@ -48,7 +47,6 @@
       /* Recibe una función que se invoca cada que hay un cambio en la
        * autenticación y recibe el modelo con las características del usuario.
        */
-      
       auth.onAuthStateChanged(
         /** Recibe las características del usuario o null si no ha iniciado
          * sesión. */
@@ -59,7 +57,6 @@
             email.value = usuarioAuth.email;
             nombre.value = usuarioAuth.displayName || "";
             avatar.src = usuarioAuth.photoURL || "";
-            
             // Muestra los mensajes del chat.
             muestraMensajes();
           } else {
@@ -82,8 +79,9 @@
          * El timestamp contiene la fecha y hora en que se agrega el registro.
          */
         firestore.collection("MENSAJE").add({
+          NOMBRE: nombre.value,
           USUARIO: usuario,
-          EMAIL: texto.value.trim(),
+          AVATAR: avatar.src,
           TEXTO: texto.value.trim(),
           TIMESTAMP: firebase.firestore.FieldValue.serverTimestamp()
         });
@@ -105,7 +103,7 @@
              documentos => {
               let inner = "";
               if (documentos.size > 0) {
-                /* Cuando el número de documentos devueltos por la consultta es
+                /* Cuando el número de documentos devueltos por la consulta es
                  * mayor que 0, Revisa uno por uno los documentos y los
                  * muestra. El iterador "doc" apunta a un documento de la base
                  * de datos. */
@@ -114,18 +112,12 @@
                   const data = doc.data();
                   /* Agrega un li con los datos del registro, que se codifican
                    * para evitar inyección de código. */
-                  
                   inner += /* html */
-                    `
-                   <li>
-                      <b>${cod(data.USUARIO)}</b>
-                      <br>
-                      <br>${cod(data.TEXTO)}<b>
-                     <br>
-                     <br>${cod(data.EMAIL)}<b>
-                     <br>
-                     <br>
-
+                    `<li>
+                      <b><img src= "${cod(data.AVATAR)}" width="40px">
+                         </b><br>${cod(data.NOMBRE)}</b>
+                         <br>${cod(data.USUARIO)}</b>
+                         <br>${cod(data.TEXTO)}
                     </li>`;
                 });
                 mensajes.innerHTML = inner;
@@ -144,7 +136,6 @@
             }
           );
       }
-     
       async function terminaSesión() {
         try {
           if (desconecta) {
