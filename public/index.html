@@ -83,6 +83,7 @@
          */
         firestore.collection("MENSAJE").add({
           USUARIO: usuario,
+          EMAIL: texto.value.trim(),
           TEXTO: texto.value.trim(),
           TIMESTAMP: firebase.firestore.FieldValue.serverTimestamp()
         });
@@ -121,7 +122,7 @@
                       <br>
                       <br>${cod(data.TEXTO)}<b>
                      <br>
-                     <figure><img id=avatar src=photoUrl alt=Avatar></figure>
+                     <br>${cod(data.EMAIL)}<b>
                      <br>
                      <br>
 
