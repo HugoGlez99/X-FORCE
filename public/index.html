@@ -113,9 +113,10 @@
                   /* Agrega un li con los datos del registro, que se codifican
                    * para evitar inyección de código. */
                   inner += /* html */
-                    `<li>
-                      <b><img src= "${cod(data.AVATAR)}" width="40px">
-                         </b><br>${cod(data.NOMBRE)}</b>
+                    `
+                      <br>
+                      <li><b><img src= "${cod(data.AVATAR)}" width="40px">
+                         <br>${cod(data.NOMBRE)}</b>
                          <br>${cod(data.USUARIO)}</b>
                          <br>${cod(data.TEXTO)}
                     </li>`;
