@@ -26,7 +26,26 @@ figure img {
   color: white;
   box-shadow: 7px 13px 37px #000;
 }
-
+.form-register1 {
+  width: 300px;
+  background: #24303c;
+  padding: auto;
+  margin: auto;
+  margin-top: auto;
+  border-radius: 5px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+.form-register2 {
+  width: 200px;
+  padding: auto;
+  margin: auto;
+  margin-top: auto;
+  border-radius: 5px;
+  font-family: 'calibri';
+  color: white;
+}
 .form-register h4 {
   font-size: 22px;
   margin-bottom: 20px;
@@ -62,6 +81,15 @@ figure img {
 }
 
 .form-register .botons {
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+.botons {
   width: 100%;
   background: #1f53c5;
   border: none;

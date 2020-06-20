@@ -33,7 +33,8 @@
 	  <ul id="mensajes">
       <li><progress max="100">Cargando…</progress></li>
     </ul>
-   
+   </form>
+  </section>
     <script>
       /** Nombre de usuario atenticado por Firebase. */
       let usuario = "";
@@ -118,11 +119,11 @@
                     `
                     <center>
                       <br>
-                      <li><b><img src= "${cod(data.AVATAR)}" width="50px" float: left>
+                      <img src= "${cod(data.AVATAR)}" width="50px" float: left>
                          <br>${cod(data.NOMBRE)}</b>
                          <br>${cod(data.USUARIO)}</b>
                          <br><b>Dice:</b> ${cod(data.TEXTO)}
-                    </li>
+                    
                     </center>
                     `;
                 });
@@ -174,14 +175,18 @@
     </script>
   </body>
   <center>    
+    <section class="form-register1">
     <button class="botons" id=terminarSesión type="button" onclick="terminaSesión();">
         Terminar Sesión
       </button>
     </center>
+  </section>
   <anside>
+  <section class="form-register2">
       <div class="footer">
         <mi-footer></mi-footer>
       </div>
+    </section>
   </anside>
   
 </html>
