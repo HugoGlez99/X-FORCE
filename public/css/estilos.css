@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
 body {
-    background-image: url('css/fondo.jpg');
+    background-image: url("fondo.jpg");
 }
 #terminarSesión {
     float: right;
@@ -14,7 +14,7 @@ figure img {
     width: 40px;
     float: left;
 }
-
+ 
 .form-register {
   width: 400px;
   background: #24303c;
@@ -69,4 +69,20 @@ figure img {
   color: white;
   margin: 16px 0;
   font-size: 16px;
+}
+h1{
+font: bold 140px Arial, sans-serif; 
+		  color: #000000; 
+          margin-bottom: 30px; 
+}
+
+.footer {
+  position: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-weight: bold;
+    font-size:15px;
 }
