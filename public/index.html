@@ -8,6 +8,7 @@
     <title>Chat 3312</title>
     <script type="module" src="cmp/mi-footer.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
+    <title>Chat</title>
     <!-- Carga el núcleo de Firebase JS SDK -->
     <script src="/__/firebase/7.15.0/firebase-app.js"></script>
     <!-- Agrega el manejo de autenticación. -->
@@ -16,23 +17,34 @@
     <script src="/__/firebase/7.15.0/firebase-firestore.js"></script>
     <!-- Configura la app usando la información del sitio de Firebase. -->
     <script src="/__/firebase/init.js"></script>
-  </head>
+    </head>
    <body>
-	<head>
-	  <button id=terminarSesión type="button" onclick="terminaSesión();">
-        Terminar Sesión
-      </button>
-	 </head>
+     <header>
+      <h1>Chat</h1>
+     </header>
 	  <section class="form-register">
 	  <figure><img id=avatar src="" alt=Avatar></figure>
-		<p><b><output id=email></output></b><br><output id=nombre></output></p>
+    <p><b><output id=email></output></b>
+      <br>
+      Bienvenido:
+      <output id=nombre></output></p>
+      <br>
+      <br>
 		<form action="javascript:agrega();">
-      <input id="texto" type="text" required placeholder="Mensaje">
+      <input class="controls" id="texto" type="text" required placeholder="Mensaje">
       <button  class="botons" >Enviar</button>
 	  <ul id="mensajes">
       <li><progress max="100">Cargando…</progress></li>
     </ul>
-    <mi-footer></mi-footer>
+    <anside>
+      <center>    
+        <button class="botons" id=terminarSesión type="button" onclick="terminaSesión();">
+            Terminar Sesión
+          </button>
+        </center>
+        <mi-footer></mi-footer>
+    </anside>
+    
     <script>
       /** Nombre de usuario atenticado por Firebase. */
       let usuario = "";

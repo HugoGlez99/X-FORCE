@@ -1,13 +1,15 @@
 class MiFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = /* html */
-            `Copyright &copy; 2020 Hugo Alberto Gonzalez Perez
-                                Ambrosio Dominguez Miguel
-                                Ramirez Bello Eduardo
-                                Santos Gomez Kevin 
-                                Castellanos Buendia Sarahí
-                                Perez Espinoza Rogelio
-                                Torres Arellano Jesus.`;
+            `
+            <p>Copyright &copy; 2020 Hugo Alberto Gonzalez Perez.
+            <br> Ambrosio Dominguez Miguel
+            <br>Ramirez Bello Eduardo
+            <br>Santos Gomez Kevin 
+            <br>Castellanos Buendia Sarahí
+            <br>Perez Espinoza Rogelio
+            <br>Torres Arellano Jesus`;
     }
 }
 customElements.define("mi-footer", MiFooter);
+
