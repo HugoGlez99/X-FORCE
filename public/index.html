@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chat</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Chat 3312</title>
     <script type="module" src="cmp/mi-footer.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
     <!-- Carga el núcleo de Firebase JS SDK -->
@@ -15,20 +17,19 @@
     <!-- Configura la app usando la información del sitio de Firebase. -->
     <script src="/__/firebase/init.js"></script>
   </head>
-  <body>
-    <header>
-      <button id=terminarSesión type="button" onclick="terminaSesión();">
+   <body>
+	<head>
+	  <button id=terminarSesión type="button" onclick="terminaSesión();">
         Terminar Sesión
       </button>
-      <h1>Chat</h1>
-    </header>
-    <figure><img id=avatar src="" alt=Avatar></figure>
-    <p><b><output id=email></output></b><br><output id=nombre></output></p>
-    <form action="javascript:agrega();">
+	 </head>
+	  <section class="form-register">
+	  <figure><img id=avatar src="" alt=Avatar></figure>
+		<p><b><output id=email></output></b><br><output id=nombre></output></p>
+		<form action="javascript:agrega();">
       <input id="texto" type="text" required placeholder="Mensaje">
-      <button>Enviar</button>
-    </form>
-    <ul id="mensajes">
+      <button  class="botons" >Enviar</button>
+	  <ul id="mensajes">
       <li><progress max="100">Cargando…</progress></li>
     </ul>
     <mi-footer></mi-footer>
