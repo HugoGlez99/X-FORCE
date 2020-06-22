@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Chat</title>
+    <link rel="icon" type="image/png" href="css\chat4.png">
+        <title>Chat 3312</title>
      
     <script type="module" src="cmp/mi-footer.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
@@ -23,14 +24,20 @@
 	  <figure><img id=avatar src="" alt=Avatar></figure>
     <p><b><output id=email></output></b>
       <br>
-      Bienvenido
+    Bienvenido
       <output id=nombre></output></p>
       <br>
       <br>
 		<form action="javascript:agrega();">
-      <input class="controls" id="texto" type="text" required placeholder="Mensaje">
-      <button  class="botons" >Enviar</button>
-	  <ul id="mensajes">
+      <table class="egt">
+        <tr>
+          <td><input class="controls" id="texto" type="text" required placeholder="Mensaje" ></td>
+          <td><input class="botons2" type="reset" value="🗑️"></td>
+    </tr>
+  </table>
+      <button  class="botons4">Enviar</button>
+    
+      <ul id="mensajes">
       <li><progress max="100">Cargando…</progress></li>
     </ul>
    </form>
