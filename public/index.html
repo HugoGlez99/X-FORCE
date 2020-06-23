@@ -28,6 +28,10 @@
       <output id=nombre></output></p>
       <br>
       <br>
+      <br>
+      <br>
+      <br>
+      
 		<form action="javascript:agrega();">
       <table class="egt">
         <tr>
@@ -124,16 +128,10 @@
                    * para evitar inyección de código. */
                   inner += /* html */
                     `
-                    <div id="main-container">
-                      <table>
-                        <thead>
-                          <tr>
-                            <th>Chat</th>
-                        </tr>
-                      </thead>
+                   
                     <center>
                       <br>
-                      <img src= "${cod(data.AVATAR)}" width="50px" float: left>
+                      <img src= "${cod(data.AVATAR)}" width="60px" float: left>
                          <br>${cod(data.NOMBRE)}</b>
                          <br>${cod(data.USUARIO)}</b>
                          <br><b>Dice:</b> ${cod(data.TEXTO)}
